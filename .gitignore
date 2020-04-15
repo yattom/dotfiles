@@ -1,0 +1,17 @@
+*~
+.bundle
+db/*.sqlite3
+*.log
+/tmp/
+doc/
+*.swp
+.project
+.DS_Store
+tmp/**/*
+*bak
+*BAK
+*pyc
+*pyo
+*.egg-info/
+.pytest_cache/
+

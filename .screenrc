@@ -1,0 +1,10 @@
+autodetach on
+encoding utf-8
+#hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+#hardstatus alwayslastline " %m/%d %c [%n:%Lw] %H:%h"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%{= gk}%-Lw%{= Gk}%50>%n%f* %t%{-}%+Lw%<"
+defscrollback 100000
+screen -t top 0 top
+screen -t zsh 1
+screen -t vi 2

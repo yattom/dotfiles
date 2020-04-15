@@ -1,0 +1,57 @@
+[[plugins]]
+repo = 'Shougo/vimproc'
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+# Copied from neobundle example
+#
+# --------FROM HERE
+# original repos on github
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Lokaltog/vim-easymotion'
+
+# [[plugins]]
+# repo = 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+[[plugins]]
+# vim-scripts repos
+repo = 'vim-scripts/L9'
+
+[[plugins]]
+repo = 'vim-scripts/rails.vim'
+# --------TO HERE
+
+# My settings
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'Shougo/neocomplcache'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# [[plugins]]
+# repo = 'andviro/flake8-vim'
+
+[[plugins]]
+repo = 'lambdatoast/elm.vim'
+
+[[plugins]]
+# coffee script
+# see http://qiita.com/items/fb442cfa78f91634cfaa
+repo = 'kchmck/vim-coffee-script'
+
+#[[plugins]]
+#repo = 'wakatime/vim-wakatime'

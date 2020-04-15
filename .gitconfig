@@ -1,0 +1,38 @@
+[core]
+#pager = lv -c -n -Outf8 +s
+pager = less -N -
+editor = /usr/bin/vim
+# editor = "'C:/Program Files (x86)/vim/vim80/gvim.exe'"
+excludesfile = ~/.gitignore
+# autocrlf=input
+
+[color]
+diff=auto
+status=auto
+branch=auto
+interactive=auto
+
+[user]
+name = yattom
+email = tsutomu.yasui@gmail.com
+
+[alias]
+pr=pull --rebase
+ci=commit -v
+st=!git --no-pager status
+chk=push --dry-run
+co=checkout
+diff=diff --color-words --ignore-all-space
+df=diff --color-words --ignore-all-space
+dc=diff --cached --color-words --ignore-all-space
+sh=show --color-words --ignore-all-space
+l = !git --no-pager log -50 --reverse
+
+[status]
+submodulesummary=true
+
+[push]
+#default = simple
+
+[sendpack]
+sideband = false

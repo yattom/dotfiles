@@ -1,0 +1,2 @@
+changeset = '\033[3m[{rev}] \033[7m{desc|firstline|strip}\033[0m\n  \033[6m{branches} ({date|age} by {author|person}) {bookmarks}{tags}\033[6m\n'
+

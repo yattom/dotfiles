@@ -77,6 +77,14 @@ alias egrep='egrep --color=auto'
 alias l='ls -laF'
 alias off='screen -D'
 
+alias ppytest='pipenv run pytest'
+alias pipython='pipenv run ipython'
+alias dkilla='docker ps --format '{{.ID}}' | xargs docker kill'
+alias drma='docker ps -a --format '{{.ID}}' | xargs docker rm'
+alias drmia='docker images --format '{{.ID}}' | xargs docker rmi'
+alias dcm=docker-compose
+
+
 alias scrn='
 screen -list | grep -q "No Sockets found in"
 if [[ $? == 1 ]]; then
@@ -99,5 +107,9 @@ elif [ -S $agent ]; then
 else
 	echo "no ssh-agent"
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . ~/.profile_local

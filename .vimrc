@@ -27,7 +27,7 @@ if dein#load_state(s:dein_dir)
 
   " プラグインリストを収めた TOML ファイル
   " 予め TOML ファイル（後述）を用意しておく
-  let g:rc_dir    = expand('~/vimfiles/rc')
+  let g:rc_dir    = expand('~/.vim/rc')
   let s:toml      = g:rc_dir . '/dein.toml'
   " let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
@@ -66,7 +66,7 @@ set nu
 set guifont=Ricty_Diminished_Discord:h13:cSHIFTJIS:qDRAFT
 highlight Normal guibg=#000040 guifg=White
 highlight LineNr guifg=#C000C0 guibg=#404040 cterm=underline
-highlight Search guibg=#004000 cterm=reverse ctermfg=Yellow
+highlight Search guibg=#004000 cterm=reverse ctermfg=DarkGreen
 set background=dark
 syntax on
 set bs=indent,eol

@@ -78,7 +78,7 @@ filetype plugin on
 set hidden
 " 文字コードの話はここを参照 http://www.kawaz.jp/pukiwiki/?vim#p0799eb
 " set encoding=utf-8
-set encoding=cp932
+set encoding=utf-8
 set fileencodings=utf-8
 set ambiwidth=double
 

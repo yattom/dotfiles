@@ -26,7 +26,8 @@ diff=diff --color-words --ignore-all-space
 df=diff --color-words --ignore-all-space
 dc=diff --cached --color-words --ignore-all-space
 sh=show --color-words --ignore-all-space
-l = !git --no-pager log -50 --reverse
+l = !git --no-pager log -50 --reverse --stat
+lg=log --graph
 
 [status]
 submodulesummary=true

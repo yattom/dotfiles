@@ -78,7 +78,7 @@ filetype plugin on
 set hidden
 " 文字コードの話はここを参照 http://www.kawaz.jp/pukiwiki/?vim#p0799eb
 " set encoding=utf-8
-set encoding=cp932
+set encoding=utf-8
 set fileencodings=utf-8
 set ambiwidth=double
 
@@ -92,6 +92,7 @@ autocmd FileType eruby setlocal expandtab sts=2 ts=2
 autocmd FileType javascript setlocal expandtab sts=2 ts=2 sw=2
 autocmd FileType coffee setlocal expandtab sts=2 ts=2 sw=2
 autocmd FileType dot setlocal expandtab sts=2 ts=2 tw=0 sw=2
+autocmd FileType json setlocal expandtab sts=2 ts=2
 
 autocmd FileType perl setlocal noexpandtab
 
@@ -135,6 +136,7 @@ au BufRead,BufNewFile *.scala set filetype=scala
 " other filetypes
 au BufRead,BufNewFile *.as set filetype=actionscript
 au BufRead,BufNewFile *.mxml set filetype=mxml
+au BufRead,BufNewFile *.json set filetype=json
 
 "" for screen hardstatus title display
 "" http://goungoun.dip.jp/app/fswiki/wiki.cgi/devnotebook?page=screen

@@ -49,7 +49,6 @@ endif  "ここまで
 " dein設定 ここまで
 
 
-
 " Required:
 filetype plugin indent on
 

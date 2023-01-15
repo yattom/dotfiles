@@ -1,52 +1,52 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
-" deinİ’è QÆ: http://qiita.com/delphinus/items/00ff2c0ba972c6e41542
-" ãè‚­“®‚©‚È‚¢‚Ì‚Å‚¢‚Á‚½‚ñŠO‚µ‚Ä‚¨‚­ 2017.3.15
-if 1  "‚±‚±‚©‚ç...
-" vimrc ‚ÉˆÈ‰º‚Ì‚æ‚¤‚É’Ç‹L
+" deinè¨­å®š å‚ç…§: http://qiita.com/delphinus/items/00ff2c0ba972c6e41542
+" ä¸Šæ‰‹ãå‹•ã‹ãªã„ã®ã§ã„ã£ãŸã‚“å¤–ã—ã¦ãŠã 2017.3.15
+if 0  "ã“ã“ã‹ã‚‰...
+" vimrc ã«ä»¥ä¸‹ã®ã‚ˆã†ã«è¿½è¨˜
 
-" ƒvƒ‰ƒOƒCƒ“‚ªÀÛ‚ÉƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚éƒfƒBƒŒƒNƒgƒŠ
+" ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãŒå®Ÿéš›ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã‚‹ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 let s:dein_dir = expand('~/.cache/dein')
-" dein.vim –{‘Ì
+" dein.vim æœ¬ä½“
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-" dein.vim ‚ª‚È‚¯‚ê‚Î github ‚©‚ç—‚Æ‚µ‚Ä‚­‚é
+" dein.vim ãŒãªã‘ã‚Œã° github ã‹ã‚‰è½ã¨ã—ã¦ãã‚‹
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
-  " ‰º‚Ìs‚Í––”ö‚É'\'‚ğ’Ç‰Á‚·‚é‚ªA‚»‚ê‚¾‚Æ“®‚©‚È‚¢–Í—l
+  " ä¸‹ã®è¡Œã¯æœ«å°¾ã«'\'ã‚’è¿½åŠ ã™ã‚‹ãŒã€ãã‚Œã ã¨å‹•ã‹ãªã„æ¨¡æ§˜
   " execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
   execute 'set runtimepath^=' . s:dein_repo_dir
 endif
 
-" İ’èŠJn
+" è¨­å®šé–‹å§‹
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  " ƒvƒ‰ƒOƒCƒ“ƒŠƒXƒg‚ğû‚ß‚½ TOML ƒtƒ@ƒCƒ‹
-  " —\‚ß TOML ƒtƒ@ƒCƒ‹iŒãqj‚ğ—pˆÓ‚µ‚Ä‚¨‚­
+  " ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãƒªã‚¹ãƒˆã‚’åã‚ãŸ TOML ãƒ•ã‚¡ã‚¤ãƒ«
+  " äºˆã‚ TOML ãƒ•ã‚¡ã‚¤ãƒ«ï¼ˆå¾Œè¿°ï¼‰ã‚’ç”¨æ„ã—ã¦ãŠã
   let g:rc_dir    = expand('~/.vim/rc')
   let s:toml      = g:rc_dir . '/dein.toml'
   " let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
-  " TOML ‚ğ“Ç‚İ‚İAƒLƒƒƒbƒVƒ…‚µ‚Ä‚¨‚­
+  " TOML ã‚’èª­ã¿è¾¼ã¿ã€ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ã¦ãŠã
   call dein#load_toml(s:toml,      {'lazy': 0})
   " call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  " İ’èI—¹
+  " è¨­å®šçµ‚äº†
   call dein#end()
   call dein#save_state()
 endif
 
-" ‚à‚µA–¢ƒCƒ“ƒXƒg[ƒ‹‚à‚Ì‚à‚Ì‚ª‚ ‚Á‚½‚çƒCƒ“ƒXƒg[ƒ‹
+" ã‚‚ã—ã€æœªã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã‚‚ã®ã‚‚ã®ãŒã‚ã£ãŸã‚‰ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 if dein#check_install()
   call dein#install()
 endif
 
-endif  "‚±‚±‚Ü‚Å
-" deinİ’è ‚±‚±‚Ü‚Å
+endif  "ã“ã“ã¾ã§
+" deinè¨­å®š ã“ã“ã¾ã§
 
 
 
@@ -76,7 +76,7 @@ set incsearch
 filetype indent on
 filetype plugin on
 set hidden
-" •¶šƒR[ƒh‚Ì˜b‚Í‚±‚±‚ğQÆ http://www.kawaz.jp/pukiwiki/?vim#p0799eb
+" æ–‡å­—ã‚³ãƒ¼ãƒ‰ã®è©±ã¯ã“ã“ã‚’å‚ç…§ http://www.kawaz.jp/pukiwiki/?vim#p0799eb
 " set encoding=utf-8
 set encoding=utf-8
 set fileencodings=utf-8

@@ -37,3 +37,14 @@ submodulesummary=true
 
 [sendpack]
 sideband = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential "helperselector"]
+	selected = wincred
+[credential "https://gl.creationline.com"]
+	provider = generic
+[init]
+	defaultBranch = main

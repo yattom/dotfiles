@@ -37,6 +37,7 @@ submodulesummary=true
 
 [sendpack]
 sideband = false
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -48,3 +49,9 @@ sideband = false
 	provider = generic
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

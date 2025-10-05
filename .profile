@@ -46,6 +46,9 @@ alias rake='time rake'
 
 alias tt='tmux new-session -A -s default'
 
+alias ghce='gh copilot explain'
+alias ghcs='gh copilot suggest'
+
 # export DISPLAY=:1
 export EDITOR=/usr/bin/vi
 export TZ=JST-9

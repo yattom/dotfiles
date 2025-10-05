@@ -84,6 +84,8 @@ alias drma='docker ps -a --format '{{.ID}}' | xargs docker rm'
 alias drmia='docker images --format '{{.ID}}' | xargs docker rmi'
 alias dcm=docker-compose
 
+alias ghce='gh copilot explain'
+alias ghcs='gh copilot suggest'
 
 alias scrn='
 screen -list | grep -q "No Sockets found in"

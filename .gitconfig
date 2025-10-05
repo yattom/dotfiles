@@ -1,6 +1,6 @@
 [core]
 #pager = lv -c -n -Outf8 +s
-pager = less -N -
+	pager = 
 editor = /usr/bin/vim
 # editor = "'C:/Program Files (x86)/vim/vim80/gvim.exe'"
 excludesfile = ~/.gitignore
@@ -28,6 +28,7 @@ dc=diff --cached --color-words --ignore-all-space
 sh=show --color-words --ignore-all-space
 l = !git --no-pager log -50 --reverse --stat
 lg=log --graph
+nb=switch -c
 
 [status]
 submodulesummary=true

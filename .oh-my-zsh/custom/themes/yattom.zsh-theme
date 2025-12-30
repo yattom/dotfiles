@@ -1,5 +1,6 @@
-PROMPT="%U%F{green}%m%u%f%B%F{cyan} %U%~%f%u "'$(virtualenv_prompt_info)'"
-%#%b "
+: ${ZSH_THEME_HOST_COLOR:=green}
+PROMPT='%U%F{$ZSH_THEME_HOST_COLOR}%m%u%f%B%F{cyan} %U%~%f%u $(virtualenv_prompt_info)
+%#%b '
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
 RPROMPT='$(git_prompt_info)'

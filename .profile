@@ -44,7 +44,20 @@ fi
 alias bune='time bundle exec'
 alias rake='time rake'
 
-alias tt='tmux new-session -A -s default'
+# alias tt='tmux new-session -A -s default'
+alias tt='f() {
+  if [ -n "$1" ]; then
+    name="$1"
+  elif [ -f ./tmux.conf ]; then
+    name="$(basename "$(pwd)")"
+  else
+    name="default"
+  fi
+
+  tmux new -A -s "$name"
+}; f'
+
+
 
 alias ghce='gh copilot explain'
 alias ghcs='gh copilot suggest'

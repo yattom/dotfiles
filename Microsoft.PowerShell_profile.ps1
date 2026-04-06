@@ -33,7 +33,9 @@ Add-Path $home\tools\python3.9.2\Scripts
 Set-Item env:PYTHONPATH "${env:HOMEDRIVE}${env:HOMEPATH}\work"
 
 # Git for Windows
-Set-Item env:GIT_SSH C:\ProgramData\chocolatey\bin\PLINK.EXE
+# Windows標準のOpenSSHを使って、ssh-agentもサービスとして実行するのに統一
+# Set-Item env:GIT_SSH C:\ProgramData\chocolatey\bin\PLINK.EXE
+Set-Item env:GIT_SSH C:\WINDOWS\System32\OpenSSH\ssh.exe
 
 # Android SDK
 Add-Path "C:\Users\tsuto\AppData\Local\Android\Sdk\platform-tools"
@@ -86,5 +88,5 @@ Set-PSReadlineOption -BellStyle None
 
 # short cut aliases
 function river {
-	C:\ProgramData\chocolatey\bin\PUTTY.EXE -load River
-}
+#  C:\ProgramData\chocolatey\bin\PUTTY.EXE -load River
+  C:\WINDOWS\System32\OpenSSH\ssh.exe -i $HOME\etc\id_ed25519.yattom river}

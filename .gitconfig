@@ -14,7 +14,7 @@ interactive=auto
 
 [user]
 name = yattom
-email = tsutomu.yasui@gmail.com
+	email = t-yasui@creationline.com
 
 [alias]
 pr=pull --rebase
@@ -45,7 +45,7 @@ sideband = false
 	process = git-lfs filter-process
 	required = true
 [credential "helperselector"]
-	selected = wincred
+	selected = manager
 [credential "https://gl.creationline.com"]
 	provider = generic
 [init]

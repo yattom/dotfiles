@@ -1,8 +1,9 @@
 [core]
 #pager = lv -c -n -Outf8 +s
 	pager = 
-editor = /usr/bin/vim
+# editor = /usr/bin/vim
 # editor = "'C:/Program Files (x86)/vim/vim80/gvim.exe'"
+editor = "'C:/Users/tsuto/scoop/shims/gvim.exe'"
 excludesfile = ~/.gitignore
 # autocrlf=input
 
@@ -14,7 +15,7 @@ interactive=auto
 
 [user]
 name = yattom
-	email = t-yasui@creationline.com
+	email = tsutomu.yasui@gmail.com
 
 [alias]
 pr=pull --rebase

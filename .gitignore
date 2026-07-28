@@ -21,3 +21,5 @@ tmp/**/*
 
 .vim/.netrwhist
 
+
+**/.claude/settings.local.json

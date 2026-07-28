@@ -27,10 +27,12 @@ Add-Path "C:\Program Files\MIFES11"
 # Remove-Item Alias:curl  # cURL is installed via chocolatey
 Add-Path "C:\Program Files\Docker\Docker\resources\bin"
 
-# python
-Add-Path $home\tools\Python3.9.2
-Add-Path $home\tools\python3.9.2\Scripts
-Set-Item env:PYTHONPATH "${env:HOMEDRIVE}${env:HOMEPATH}\work"
+# Claude (relies on Git-bash)
+Add-Path "C:\Users\yattom\.local\bin"
+Set-Item env:CLAUDE_CODE_GIT_BASH_PATH "C:\Users\yattom\scoop\shims\git-bash.exe"
+
+# to use diff.ext from diffutils
+Remove-Item -Force Alias:\diff
 
 # Git for Windows
 # Windows標準のOpenSSHを使って、ssh-agentもサービスとして実行するのに統一
@@ -88,5 +90,5 @@ Set-PSReadlineOption -BellStyle None
 
 # short cut aliases
 function river {
-#  C:\ProgramData\chocolatey\bin\PUTTY.EXE -load River
-  C:\WINDOWS\System32\OpenSSH\ssh.exe -i $HOME\etc\id_ed25519.yattom river}
+  C:\WINDOWS\System32\OpenSSH\ssh.exe -i $HOME\etc\id_ed25519.yattom river
+}

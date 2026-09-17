@@ -28,7 +28,7 @@ Add-Path "C:\Program Files\MIFES11"
 Add-Path "C:\Program Files\Docker\Docker\resources\bin"
 
 # Claude (relies on Git-bash)
-Add-Path "C:\Users\yattom\.local\bin"
+Add-Path "$HOME\.local\bin"
 Set-Item env:CLAUDE_CODE_GIT_BASH_PATH "C:\Users\yattom\scoop\shims\git-bash.exe"
 
 # to use diff.ext from diffutils
@@ -40,11 +40,23 @@ Remove-Item -Force Alias:\diff
 Set-Item env:GIT_SSH C:\WINDOWS\System32\OpenSSH\ssh.exe
 
 # Android SDK
-Add-Path "C:\Users\tsuto\AppData\Local\Android\Sdk\platform-tools"
+Add-Path "$HOME\AppData\Local\Android\Sdk\platform-tools"
 
 # Flutter
 Set-Item env:FLUTTER_PATH "${env:HOMEDRIVE}${env:HOMEPATH}\tools\flutter"
 Add-Path $env:FLUTTER_PATH\bin
+
+# Local Claude on GONDOLIN (Desktop Win11)
+function lclaude() {
+  Write-Host "Connecting to Remote KoboldCpp (gondolin)..." -ForegroundColor Green
+  Set-Item env:ANTHROPIC_AUTH_TOKEN "ollama"
+  Set-Item env:ANTHROPIC_API_KEY ""
+  Set-Item env:ANTHROPIC_BASE_URL "http://gondolin:5001/v1"
+  claude --model qwen3.6
+}
+
+# Antigravity CLI
+Add-Path "$HOME\C:\Users\tsuto\AppData\Local\agy\bin\"
 
 Set-Alias which Which-Command
 function Which-Command($cmd) {
@@ -90,5 +102,6 @@ Set-PSReadlineOption -BellStyle None
 
 # short cut aliases
 function river {
-  C:\WINDOWS\System32\OpenSSH\ssh.exe -i $HOME\etc\id_ed25519.yattom river
+  # $HOME/etc/ にキーがある環境が残っているかも
+  C:\WINDOWS\System32\OpenSSH\ssh.exe -i $HOME\.ssh\id_ed25519.yattom river
 }

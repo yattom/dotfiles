@@ -14,6 +14,7 @@
 - When asked a question always answer directly instead of trying to fixing something related to the question.  Never guess user's intent.
 - Usually user doesn't want to hear suggestions for next steps.  Present suggestion for possible ways to make progress only when explicitly asked.
 - Check user's input for English grammar and always point out any errors however small or minor.
+- Do not use jargon words or uneccessary strong abstract when evaluating tasks or work.  For example (in Japanese), 壊れる, 濁る, 腐る, 落ちる, 崩れる, 直結する, etc.  They are not only dirty but obscure the exact meaning and misinform the user. Use concrete words like 動かなくなる, 間違った結果になる, 役に立たないデータになる, 読みにくいデータになる, コードがクリアでない, ロジックがクリアでない, データがクリアでない, 〇〇の前提が想定と違って〇〇となる, 〇〇が後続のタスクで利用できる, 〇〇の情報が役立つ, etc.  Note that it's okay to use those words to describe a fact or a result of a process like データが壊れた, テストが落ちた.
 
 
 # Development and working policy
@@ -34,7 +35,7 @@
 3. Dependency Management and Security
   - Always pin exact versions for all libraries and dependencies to ensure reproducibility and stability.
   - Ensure lock files (`uv.lock`, `poetry.lock` for existing projects, and `pnpm-lock.yaml`) are always generated and committed to the version control system.
-  - Enforce a "cooling-off period" of 24 to 48 hours relative to the current time of executions for future package installations and updates to mitigate the risk of zero-day vulnerabilities or supply chain attacks. Implement the following native settings:
+  - Never install a package version published less than 24–48 hours ago. This constrains which version you select, not when you may install: an already-aged and safe version can be installed immediately, with no waiting. Enforce via minimumReleaseAge (pnpm) / exclude-newer (uv).
     - For Python (uv): Configure `exclude-newer` (e.g., `"1 day"` or `"2 days"`) under `[tool.uv]` in `pyproject.toml`, or via `--exclude-newer` on the CLI. Per-package overrides are available via `exclude-newer-package`.
     - For Python (Poetry, existing projects): Configure `solver.min-release-age` (e.g., `1` or `2` days) in `pyproject.toml` or via CLI/environment variables.
     - For Node.js (pnpm): Configure `minimumReleaseAge` (e.g., `1440` or `2880` minutes) in `pnpm-workspace.yaml`.

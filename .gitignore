@@ -23,3 +23,7 @@ tmp/**/*
 
 
 **/.claude/settings.local.json
+**/.claude/.cc-writes/
+
+
+**/.tmux.conf

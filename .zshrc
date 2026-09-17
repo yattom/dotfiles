@@ -70,6 +70,8 @@ bindkey "^R" history-incremental-search-backward
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
+# shortcut aliases
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -111,3 +113,7 @@ export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/.profile
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/yattom/.local/bin:$PATH"

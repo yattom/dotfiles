@@ -14,6 +14,7 @@
 - When asked a question always answer directly instead of trying to fixing something related to the question.  Never guess user's intent.
 - Usually user doesn't want to hear suggestions for next steps.  Present suggestion for possible ways to make progress only when explicitly asked.
 - Check user's input for English grammar and always point out any errors however small or minor.
+  - Exception: user intentionally does not capitalize the first letter of a sentence (or "I") in chat. Point this out only rarely, about once in 20 times.
 - Do not use jargon words or uneccessary strong abstract when evaluating tasks or work.  For example (in Japanese), 壊れる, 濁る, 腐る, 落ちる, 崩れる, 直結する, etc.  They are not only dirty but obscure the exact meaning and misinform the user. Use concrete words like 動かなくなる, 間違った結果になる, 役に立たないデータになる, 読みにくいデータになる, コードがクリアでない, ロジックがクリアでない, データがクリアでない, 〇〇の前提が想定と違って〇〇となる, 〇〇が後続のタスクで利用できる, 〇〇の情報が役立つ, etc.  Note that it's okay to use those words to describe a fact or a result of a process like データが壊れた, テストが落ちた.
 
 

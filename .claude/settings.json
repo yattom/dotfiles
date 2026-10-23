@@ -1,5 +1,4 @@
 {
-  "model": "opus",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "theme": "dark",

@@ -1,3 +1,4 @@
+echo "プロファイル ($PSCommandPath)"
 function prompt() {
   # see https://qiita.com/skkzsh/items/5e03bb7792629927acfa
   if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
@@ -105,3 +106,11 @@ function river {
   # $HOME/etc/ にキーがある環境が残っているかも
   C:\WINDOWS\System32\OpenSSH\ssh.exe -i $HOME\.ssh\id_ed25519.yattom river
 }
+
+
+# use python throught uv
+# python コマンドを uv が管理する最新の Python に紐付ける
+echo "python, pipはuvを経由しています"
+function python { & (uv python find 3.15) $args }
+function pip { & (uv python find 3.15) -m pip $args }
+
